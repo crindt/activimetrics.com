@@ -2,8 +2,8 @@ source 'http://rubygems.org'
 
 gem "nesta", :git => "git://github.com/gma/nesta.git", :branch => 'master'
 
-gem "nesta-plugin-vpim", \
-    :path => "../../nesta-plugin-vpim"
+gem "nesta-plugin-vpim", :git => "git://github.com/crindt/nesta-plugin-vpim.git", :branch => 'master'
+    
 
 gem "nesta-plugin-foldable"
 
