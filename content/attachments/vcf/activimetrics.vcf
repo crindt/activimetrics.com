@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+N:;;Activimetrics;;
+FN:Activimetrics, LLC
+EMAIL;TYPE=INTERNET:info@activimetrics.com
+TEL;TYPE=CELL;TYPE=VOICE:858-342-9136
+TEL;TYPE=WORK;TYPE=FAX:760-634-1981
+ADR;TYPE=WORK:;;2925 Redwood Ave;Costa Mesa;CA;92626;USA
+ORG:Activimetrics, LLC
+GEO:33.67707,-117.92306
+URL:http://www.activimetrics.com
+X-TWITTER:@activimetrics
+X-RSS:http://www.activimetrics.com/articles.xml
+END:VCARD

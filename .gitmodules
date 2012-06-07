@@ -1,0 +1,6 @@
+[submodule "themes/bootstrap-mchung"]
+	path = themes/bootstrap-mchung
+	url = git://github.com/mchung/nesta-theme-bootstrap.git
+[submodule "themes/bootstrap"]
+	path = themes/bootstrap
+	url = git@github.com:crindt/bootstrap-tweaks.git
