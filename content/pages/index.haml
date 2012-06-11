@@ -17,10 +17,11 @@ Layout: layouthome
 %section#top(style="margin-top:0px;")
   .row{:style=>"border-top:0px"}
     .span10.offset2{:style=>"border-left: 1px solid #000;padding-left:1em;min-height:1200px;"}
-      %header
-        %h1 Activimetrics, LLC
+      %section.main#banner
+        %header
+          %h1 Activimetrics, LLC
 
-      %section#who
+      %section.main#who
         %header.page-header
           %h1 Who we are
         %ul.thumbnails
@@ -40,7 +41,7 @@ Layout: layouthome
                   technology can lead to travel patterns and urban forms that
                   are more sustainable.
                   
-                %a.btn.btn-primary(href="jmarca.haml") More about James
+                /%a.btn.btn-primary(href="jmarca.haml") More about James
 
           %li.span5
             .thumbnail 
@@ -49,21 +50,19 @@ Layout: layouthome
                 %img(style="width:200px;float:right" src='/attachments/img/crindt-coffee-300x500.jpg')
                 :markdown
 
-                  Craig Rindt is a founding member of Activimetrics.  He was
-                  awarded a Ph.D. in Civil and Environmental Engineering for his
-                  work in travel behavior modeling and transportation systems
-                  management using intelligent transportation systems
-                  technology.  His recent research has emphasized the use of
-                  advanced communications and ubiquitous computing technology
-                  for improving transportation system performance.  His efforts
-                  focus on both traveler-oriented and management-oriented
-                  solutions to balancing transportation system demand and
-                  capacity.
+                  Craig Rindt is a founding member of Activimetrics.
+                  He has Ph.D. in Transportation Engineering for his
+                  work in travel behavior modeling and transportation
+                  systems management using intelligent transportation
+                  systems technology.  His recent research has
+                  emphasized the use of advanced communications and
+                  ubiquitous computing technology for improving
+                  transportation system performance.
                   
-                %a.btn.btn-primary(href="crindt.haml") More about Craig
+                /%a.btn.btn-primary(href="crindt.haml") More about Craig
 
 
-      %section#what
+      %section.main#what
         %header.page-header
           %h1 What we do
         
@@ -147,11 +146,14 @@ Layout: layouthome
                 .thumbnail
                   %h4 and, yes, this too
 
-      %section#contact
+      %section.main#contact
         %header.page-header
           %h1 Contacting Activimetrics
         If you would like to get in touch with us...
-        = process_org_vcard("content/attachments/vcf/default.vcf")
+
+        %p
+          %blockquote
+            = process_org_vcard("content/attachments/vcf/default.vcf")
 
 /%section.articles= article_summaries(latest_articles)
 :javascript
