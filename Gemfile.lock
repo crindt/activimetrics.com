@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/crindt/nesta-plugin-foldable.git
+  revision: 5884b6496f392ed2b7e5f19bcd8caf8f59b4a0b2
+  branch: master
+  specs:
+    nesta-plugin-foldable (0.0.4)
+      nesta (>= 0.9.13)
+
+GIT
   remote: git://github.com/crindt/nesta-plugin-vpim.git
   revision: c426eca8f8f96ff5c7b863a938b5d79902c964ff
   branch: master
@@ -26,8 +34,6 @@ GEM
   specs:
     RedCloth (4.2.9)
     haml (3.1.6)
-    nesta-plugin-foldable (0.0.4)
-      nesta (>= 0.9.13)
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
@@ -47,5 +53,5 @@ PLATFORMS
 
 DEPENDENCIES
   nesta!
-  nesta-plugin-foldable
+  nesta-plugin-foldable!
   nesta-plugin-vpim!

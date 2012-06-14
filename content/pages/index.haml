@@ -34,88 +34,8 @@ Layout: layouthome
       %section.main#what
         %header.page-header
           %h1 What we do
-        
-        %section
-          %header#build
-            %h2 We build things
 
-          :markdown
-
-            We know the transportation domain and can...
-        
-          %ul.thumbnails
-            %li.span5
-              %a(href="#")
-                .thumbnail
-                  %h4 
-                    Understand your transportation management and planning
-                    problems
-            %li.span5
-              %a(href="#")
-                .thumbnail
-                  %h4 Organize your data for analysis
-            %li.span5
-              %a(href="#")
-                .thumbnail
-                  %h4 Analyze your data to answer questions
-            %li.span5
-              %a(href="#")
-                .thumbnail
-                  %h4 Connect your data to applications
-                
-
-        %section#design
-          %header
-            %h2 We design things
-
-          :markdown
-
-            We're experienced transportation application designers offering...
-
-          %ul.thumbnails
-            %li.span3
-              %a(href="#")
-                .thumbnail
-                  %h4 Novel products for traffic management
-            %li.span3
-              %a(href="#")
-                .thumbnail
-                  %h4 and ...
-            %li.span3
-              %a(href="#")
-                .thumbnail
-                  %h4 and this
-            %li.span3
-              %a(href="#")
-                .thumbnail
-                  %h4 and, yes, this too
-
-
-        %section#solve                
-          %header
-            %h2 We solve things
-
-          :markdown
-
-            ...
-
-          %ul.thumbnails
-            %li.span3
-              %a(href="#")
-                .thumbnail
-                  %h4 Like this
-            %li.span3
-              %a(href="#")
-                .thumbnail
-                  %h4 and this
-            %li.span3
-              %a(href="#")
-                .thumbnail
-                  %h4 and this
-            %li.span3
-              %a(href="#")
-                .thumbnail
-                  %h4 and, yes, this too
+        = haml :thumbnail_summaries, :layout => false, :locals => { :pages => Nesta::Page.find_by_path("/whatwedo").pages, :span => 'span10', :nolink => true }
 
       %section.main#contact
         %header.page-header
