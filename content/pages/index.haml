@@ -22,9 +22,9 @@ Layout: layouthome
       %section.main#banner
         %header
           .span6.offset2
-            %img{:src=>"attachments/logo.png",:style=>"width:100%;height:149px",:alt=>"Activimetrics"}
+            %img{:src=>"attachments/logo.png",:style=>"width:100%;height:149px",:alt=>"#{@title}"}
           .span4.offset4
-            %h3{:style=>"text-align:right"} life is data
+            %h3{:style=>"text-align:right"}= @subtitle
 
       %section.main#who
         %header.page-header
