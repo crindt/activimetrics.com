@@ -14,139 +14,28 @@ Layout: layouthome
           %a{:href=>"#what"} What we do
         %li
           %a{:href=>"#contact"} Contact us
+        %li
+          %a{:href=>"#legal"} Legal
 %section#top(style="margin-top:0px;")
   .row{:style=>"border-top:0px"}
     .span10.offset2{:style=>"border-left: 1px solid #000;padding-left:1em;min-height:1200px;"}
       %section.main#banner
         %header
-          %h1 Activimetrics, LLC
+          .span6.offset2
+            %img{:src=>"attachments/logo.png",:style=>"width:100%;height:149px",:alt=>"#{@title}"}
+          .span4.offset4
+            %h3{:style=>"text-align:right"}= @subtitle
 
       %section.main#who
         %header.page-header
           %h1 Who we are
-        %ul.thumbnails
-          %li.span5
-            .thumbnail 
-              %h2 James Marca
-              %div
-                :markdown 
-
-                  James Marca is a founding member of Activimetrics.  He has
-                  over 15 years of experience in applying research to solve
-                  transportation challenges.  His interests include studying the
-                  applications of information and communications technologies to
-                  transportation; discovering new applications for existing data
-                  streams; collecting real-time vehicle telematics using
-                  wireless communications systems; and how communications
-                  technology can lead to travel patterns and urban forms that
-                  are more sustainable.
-                  
-                /%a.btn.btn-primary(href="jmarca.haml") More about James
-
-          %li.span5
-            .thumbnail 
-              %h2 Craig Rindt
-              %div
-                %img(style="width:200px;float:right" src='/attachments/img/crindt-coffee-300x500.jpg')
-                :markdown
-
-                  Craig Rindt is a founding member of Activimetrics.
-                  He has Ph.D. in Transportation Engineering for his
-                  work in travel behavior modeling and transportation
-                  systems management using intelligent transportation
-                  systems technology.  His recent research has
-                  emphasized the use of advanced communications and
-                  ubiquitous computing technology for improving
-                  transportation system performance.
-                  
-                /%a.btn.btn-primary(href="crindt.haml") More about Craig
-
+        = haml :thumbnail_summaries, :layout => false, :locals => { :pages => Nesta::Page.find_by_path("/people").pages, :span => "span5", :nolink => true }
 
       %section.main#what
         %header.page-header
           %h1 What we do
-        
-        %section
-          %header#build
-            %h2 We build things
 
-          :markdown
-
-            We know the transportation domain and can...
-        
-          %ul.thumbnails
-            %li.span5
-              %a(href="#")
-                .thumbnail
-                  %h4 
-                    Understand your transportation management and planning
-                    problems
-            %li.span5
-              %a(href="#")
-                .thumbnail
-                  %h4 Organize your data for analysis
-            %li.span5
-              %a(href="#")
-                .thumbnail
-                  %h4 Analyze your data to answer questions
-            %li.span5
-              %a(href="#")
-                .thumbnail
-                  %h4 Connect your data to applications
-                
-
-        %section#design
-          %header
-            %h2 We design things
-
-          :markdown
-
-            We're experienced transportation application designers offering...
-
-          %ul.thumbnails
-            %li.span3
-              %a(href="#")
-                .thumbnail
-                  %h4 Novel products for traffic management
-            %li.span3
-              %a(href="#")
-                .thumbnail
-                  %h4 and ...
-            %li.span3
-              %a(href="#")
-                .thumbnail
-                  %h4 and this
-            %li.span3
-              %a(href="#")
-                .thumbnail
-                  %h4 and, yes, this too
-
-
-        %section#solve                
-          %header
-            %h2 We solve things
-
-          :markdown
-
-            ...
-
-          %ul.thumbnails
-            %li.span3
-              %a(href="#")
-                .thumbnail
-                  %h4 Like this
-            %li.span3
-              %a(href="#")
-                .thumbnail
-                  %h4 and this
-            %li.span3
-              %a(href="#")
-                .thumbnail
-                  %h4 and this
-            %li.span3
-              %a(href="#")
-                .thumbnail
-                  %h4 and, yes, this too
+        = haml :thumbnail_summaries, :layout => false, :locals => { :pages => Nesta::Page.find_by_path("/whatwedo").pages, :span => 'span10', :nolink => true }
 
       %section.main#contact
         %header.page-header
@@ -156,6 +45,16 @@ Layout: layouthome
         %p
           %blockquote
             = process_org_vcard("content/attachments/vcf/default.vcf")
+
+      %section.main#legal
+        %header.page-header
+          %h1 Legal
+        All content &copy;
+        :javascript
+          var dYear=(new Date()).getFullYear()
+          document.write("2012"+((dYear>2012)?("-"+dYear):""));
+        Activimetrics, LLC
+        
 
 /%section.articles= article_summaries(latest_articles)
 :javascript
